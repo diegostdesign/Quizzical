@@ -1,0 +1,152 @@
+:root {
+  --dark-purple: #293264;
+  --purple: #4D5B9E;
+  --green: #94D7A2;
+  --light-purple: #DBDEF0;
+  --gray: #F5F7FB;
+  --pink: #F8BCBC;
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+html, body{
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, p{
+  margin: 0;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--gray);
+  background-image: url(./assets/background.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.main--container{
+  width: 100%;
+  padding: 0 20px;
+  
+}
+
+.intro--container{
+  text-align: center;
+}
+
+.intro--heading{
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.questions--header{
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  user-select: none;
+}
+
+.intro--heading,
+.intro--desc,
+.questions--header,
+label,
+.questions--final_score{
+  color: var(--dark-purple)
+}
+
+.intro--desc,
+.intro--button,
+label,
+.questions--button,
+.questions--final_score{
+  font-family: "Inter", sans-serif;
+}
+
+.intro--desc{
+  margin: 7px 0 29px;
+}
+
+.intro--button{
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--gray);
+  border-radius: 15px;
+  background-color: var(--purple);
+  padding: 1em 1.75em;
+  border: none;
+  cursor: pointer;
+}
+
+.questions--container{
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+label {
+  display: inline-block;
+  background-color: none;
+  padding: 4.5px 20px;
+  font-size: 11px;
+  font-weight: 500;
+  border: 1px solid var(--purple);
+  border-radius: 8px;
+  margin: 0 12px 12px 0;
+  user-select: none;
+}
+
+input[type="radio"]:checked + label {
+  background-color:var(--green);
+  border: none;
+}
+
+input[type="radio"]:focus + label {
+  border: 2px dashed var(--purple);
+}
+
+label:hover {
+  background-color: #dfd;
+  cursor: pointer;
+}
+
+hr{
+  margin: 3px 0 15px;
+}
+
+.questions--button{
+  background-color: var(--purple);
+  border-radius: 10px;
+  color: var(--gray);
+  border: none;
+  padding: 10px 21px;
+  align-self: center;
+  cursor: pointer;
+}
+
+.flex--container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.questions--final_score{
+  font-weight: bold;
+  font-size: 13px;
+  margin-right: 8px;
+}
